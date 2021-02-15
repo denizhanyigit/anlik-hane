@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:focusable="true"
+    android:id="@+id/relativeAnaLayout"
+    android:focusableInTouchMode="true"
+    tools:context=".IlanDetayActivity">
+
+    <include
+        android:id="@+id/toolbarrr"
+        layout="@layout/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+        <TextView
+            android:textStyle="bold"
+            android:layout_below="@+id/toolbarrr"
+            android:textSize="15sp"
+            android:id="@+id/ilanBaslik"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:textColor="#000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_marginTop="100dp"
+        android:background="#fff"
+        android:id="@+id/ilanDetaySliderLayout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:orientation="vertical">
+
+        <androidx.viewpager.widget.ViewPager
+            android:background="#fff"
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+         ></androidx.viewpager.widget.ViewPager>
+
+        <me.relex.circleindicator.CircleIndicator
+            app:ci_drawable="@color/teal200"
+            app:ci_drawable_unselected="@color/white"
+            android:id="@+id/sliderNokta"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bolumler"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/ilanDetaySliderLayout"
+        android:orientation="horizontal"
+        android:padding="5dp">
+        <!--android:layout_above="@+id/layoutDetay"-->
+        <TextView
+            android:textColor="#000"
+            android:id="@+id/bilgiler"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="İlan Bilgileri"
+            android:textSize="18sp" />
+
+        <TextView
+            android:textColor="#000"
+            android:id="@+id/aciklamaTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Açıklama"
+            android:textSize="18sp" />
+
+        <!--<TextView
+            android:id="@+id/aciklamaTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_weight="1"
+            android:background="#dcdcdc"
+            android:gravity="center"
+            android:text="İlan Sahibi"
+            android:textSize="16sp" />-->
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ilanDetayOzellik"
+        android:layout_below="@+id/bolumler">
+
+        <LinearLayout
+            android:padding="10dp"
+            android:id="@+id/layoutDetay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <EditText
+                    android:textColor="#808080"
+                    android:enabled="false"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="İlan Sahibi"
+                    android:textSize="16sp" />
+                <EditText
+                    android:layout_marginTop="2dp"
+                    android:id="@+id/ilanSahibiAdSoyad"
+                    android:enabled="false"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:padding="5dp"
+                    android:textColor="#808080"
+                    android:textSize="16sp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <EditText
+                    android:textColor="#808080"
+                    android:enabled="false"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="Fiyat"
+                    android:textSize="16sp" />
+                <EditText
+                    android:id="@+id/ilanFiyat"
+                    android:enabled="false"
+                    android:layout_width="0dp"
+                    android:layout_height="34dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:padding="5dp"
+                    android:textColor="#2196F3"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:textColor="#808080"
+                    android:enabled="false"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="İlan Tarihi"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/ilanTarih"
+                    android:textColor="#808080"
+                    android:enabled="false"
+                    android:layout_width="0dp"
+                    android:layout_height="34dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:padding="5dp"
+                    android:textSize="16sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:textColor="#808080"
+                    android:enabled="false"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="Kategori"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/ilanKategori"
+                    android:textColor="#808080"
+                    android:enabled="false"
+                    android:layout_width="0dp"
+                    android:layout_height="34dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:padding="5dp"
+                    android:textSize="16sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:textColor="#808080"
+                    android:enabled="false"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="m²(Brüt)"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/ilanBrutMetre"
+                    android:textColor="#808080"
+                    android:enabled="false"
+                    android:layout_width="0dp"
+                    android:layout_height="34dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:padding="5dp"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:textColor="#808080"
+                    android:enabled="false"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="m²(Net)"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/ilanNetMetre"
+                    android:textColor="#808080"
+                    android:enabled="false"
+                    android:layout_width="0dp"
+                    android:layout_height="34dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:padding="5dp"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:textColor="#808080"
+                    android:enabled="false"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="Oda Sayısı"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/ilanOdaSayisi"
+                    android:textColor="#808080"
+                    android:enabled="false"
+                    android:layout_width="0dp"
+                    android:layout_height="34dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:padding="5dp"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:textColor="#808080"
+                    android:enabled="false"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="Bulunduğu Kat"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/ilanBulunduguKat"
+                    android:textColor="#808080"
+                    android:enabled="false"
+                    android:layout_width="0dp"
+                    android:layout_height="34dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:padding="5dp"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:textColor="#808080"
+                    android:enabled="false"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="Kat Sayısı"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/ilanKatSayisi"
+                    android:textColor="#808080"
+                    android:enabled="false"
+                    android:layout_width="0dp"
+                    android:layout_height="34dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:padding="5dp"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:textColor="#808080"
+                    android:enabled="false"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="Isıtma"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/ilanIsitma"
+                    android:textColor="#808080"
+                    android:enabled="false"
+                    android:layout_width="0dp"
+                    android:layout_height="34dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:padding="5dp"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:textColor="#808080"
+                    android:enabled="false"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="Banyo Sayısı"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/ilanBanyoSayisi"
+                    android:textColor="#808080"
+                    android:enabled="false"
+                    android:layout_width="0dp"
+                    android:layout_height="34dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:padding="5dp"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:padding="5dp"
+                    android:text="İl"
+                    android:textColor="#808080"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/ilanIl"
+                    android:textColor="#808080"
+                    android:enabled="false"
+                    android:layout_width="0dp"
+                    android:layout_height="34dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:padding="5dp"
+                    android:textSize="16sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:textColor="#808080"
+                    android:enabled="false"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="İlçe"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/ilanIlce"
+                    android:textColor="#808080"
+                    android:enabled="false"
+                    android:layout_width="0dp"
+                    android:layout_height="34dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:padding="5dp"
+                    android:textSize="16sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:textColor="#808080"
+                    android:enabled="false"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="Mahalle"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/ilanMahalle"
+                    android:textColor="#808080"
+                    android:enabled="false"
+                    android:layout_width="0dp"
+                    android:layout_height="34dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:padding="5dp"
+                    android:textSize="16sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <EditText
+                    android:textColor="#808080"
+                    android:enabled="false"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="Site İçerisinde"
+                    android:textSize="16sp" />
+                <EditText
+                    android:id="@+id/ilanSiteIcindemi"
+                    android:textColor="#808080"
+                    android:enabled="false"
+                    android:layout_width="0dp"
+                    android:layout_height="34dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:padding="5dp"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+    <ScrollView
+        android:visibility="gone"
+        android:id="@+id/scrollview2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ilanDetayOzellik"
+        android:layout_below="@+id/bolumler">
+
+    <LinearLayout
+        android:layout_above="@+id/ilanDetayOzellik"
+        android:layout_below="@+id/bolumler"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:id="@+id/aciklamaLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/ilanAciklama"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</ScrollView>
+    <LinearLayout
+        android:padding="10dp"
+        android:id="@+id/ilanDetayOzellik"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:backgroundTint="#2196F3"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:id="@+id/btnAra"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/butndesign"
+            android:text="Ara" />
+
+        <Button
+            android:id="@+id/btnMesajGonder"
+            android:backgroundTint="#2196F3"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/butndesign"
+            android:text="Mesaj Gönder" />
+    </LinearLayout>
+
+</RelativeLayout>

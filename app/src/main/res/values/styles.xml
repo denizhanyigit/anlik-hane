@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+
+        <item name ="android:textSize">25sp</item>
+        <item name="android:textColor">@android:color/white</item>
+
+
+    </style>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/purple500</item>
+        <item name="colorPrimaryDark">@color/purple500</item>
+        <item name="colorAccent">@color/purple500</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+   <!-- <style name ="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/purple500</item>
+        <item name="colorPrimaryDark">@color/purple700</item>
+        <item name="colorAccent">@color/teal200</item>
+    </style>-->
+    <style name ="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/purple500</item>
+        <item name="colorPrimaryDark">@color/purple700</item>
+        <item name="colorAccent">@color/teal200</item>
+    </style>
+    <style name="EditTextStyle">
+        <item name="colorControlNormal">#FFFFFF</item>
+        <item name="colorControlActivated">#FF0000</item>
+        <item name="colorControlHighlight">#FFFF00</item>
+    </style>
+    <style name="mEditText">
+        <item name="android:textAppearance">@android:style/TextAppearance.Large.Inverse</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:background">@drawable/medit</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+    <style name="sEditText">
+        <item name="android:textAppearance">@android:style/TextAppearance.Large.Inverse</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:background">@drawable/sedit</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+    <style name="mEditTextNew">
+        <item name="android:textAppearance">@android:style/TextAppearance.Large.Inverse</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:text">0</item>
+        <item name="android:maxLength">2</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:padding">8sp</item>
+        <item name="android:background">@drawable/medit</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+    <style name="sButonTasarim">
+        <item name="android:textAppearance">@android:style/TextAppearance.Large.Inverse</item>
+        <item name="android:radius">20dp</item>
+    </style>
+</resources>

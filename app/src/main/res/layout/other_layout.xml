@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_margin="10dp"
+        android:layout_marginRight="80dp"
+        android:backgroundTint="#F9A825"
+        android:background="@drawable/sohbet_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:maxWidth="250dp"
+            android:textSize="16sp"
+            android:id="@+id/otherTextView"
+            android:textColor="#fff"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="bu bir deneme mesajıdır"
+            />
+        <TextView
+            android:textSize="10sp"
+            android:layout_gravity="right"
+            android:id="@+id/otherDate"
+            android:textColor="#dcdcdc"
+            android:layout_margin="10dp"
+            android:text="21-5-2020 07:41:16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

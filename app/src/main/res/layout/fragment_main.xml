@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ilanlarim_layout_design"
+    android:backgroundTint="#fff"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+    <!--<com.google.android.gms.ads.AdView
+        android:layout_marginTop="20dp"
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        ads:adSize="FULL_BANNER"
+        ads:adUnitId="ca-app-pub-6261653662849942/6884340183">
+    </com.google.android.gms.ads.AdView>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="#fff"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ilanFiltrele"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/filter" />
+
+            <ImageView
+                android:id="@+id/ilanFiltreKaldir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/filterremove"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/filtreText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Filtrele" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ilanSirala"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sirala" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Sırala" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/filtreleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/ilanlarim_layout_design"
+        android:backgroundTint="#fff"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:layout_weight="6"
+                android:text="Kategori"
+                android:textColor="#2196F3"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/close"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/close32px" />
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/spinnerKategori"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/dropdown" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Adres"
+            android:textColor="#2196F3"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinnerIl"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/dropdown" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_margin="5dp"
+            android:text="İlçe seçimi yapmak istemiyorum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Spinner
+            android:id="@+id/spinnerIlce"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/dropdown" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Fiyat"
+            android:textColor="#2196F3"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/enazFiyat"
+                style="@style/sEditText"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:hint="En az"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/encokFiyat"
+                style="@style/sEditText"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:hint="En çok"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnTemizle"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/butndesign"
+                android:backgroundTint="#2196F3"
+                android:text="Temizle"
+                android:textColor="#fff" />
+
+            <Button
+                android:id="@+id/btnGoster"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/butndesign"
+                android:backgroundTint="#2196F3"
+                android:text="SONUÇLARI GÖSTER"
+                android:textColor="#fff" />
+        </LinearLayout>
+    </LinearLayout>
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:orientation="vertical"
+         android:id="@+id/linearList">
+
+
+         <ListView
+             android:divider="@null"
+             android:dividerHeight="10dp"
+             android:visibility="gone"
+             android:layout_margin="10dp"
+             android:layout_marginTop="10dp"
+             android:id="@+id/filtreleListview"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent" />
+     <ListView
+         android:divider="@null"
+         android:dividerHeight="10dp"
+         android:layout_margin="10dp"
+         android:layout_marginTop="10dp"
+         android:id="@+id/ilanlarlistView"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent" />
+
+     </LinearLayout>
+
+</LinearLayout>

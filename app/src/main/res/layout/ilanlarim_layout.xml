@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:backgroundTint="#f5f5f5"
+    android:id="@+id/relativeLayout"
+    android:background="@drawable/ilanlarim_layout_design"
+    >
+
+    <ImageView
+        android:id="@+id/ilanResim"
+        android:src="@drawable/ilan"
+        android:layout_margin="15dp"
+        android:layout_width="100dp"
+        android:layout_height="80dp"/>
+
+    <TextView
+        android:textColor="#000"
+        android:layout_toRightOf="@+id/ilanResim"
+        android:id="@+id/ilanBaslik"
+        android:text="deneme baslik"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:textSize="10sp"
+        android:textColor="#000"
+        android:text="12.05.2020"
+        android:layout_margin="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/ilanIl"
+        android:layout_toRightOf="@id/ilanResim"
+        android:id="@+id/ilanTarih"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/ilanBaslik"
+        android:layout_toRightOf="@+id/ilanResim"
+        android:id="@+id/ilanKonumIcon"
+        android:src="@drawable/location"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+        <TextView
+            android:textSize="12sp"
+            android:textColor="#000"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/ilanBaslik"
+            android:layout_toRightOf="@+id/ilanKonumIcon"
+            android:id="@+id/ilanIl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="İstanbul, "/>
+    <TextView
+        android:textSize="12sp"
+        android:textColor="#000"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/ilanBaslik"
+        android:layout_toRightOf="@+id/ilanIl"
+        android:id="@+id/ilanIlce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ataşehir"/>
+    <TextView
+        android:layout_marginRight="5dp"
+        android:textStyle="bold"
+        android:textColor="#2196F3"
+        android:textAlignment="textEnd"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/ilanIlce"
+        android:layout_toRightOf="@id/ilanTarih"
+        android:text="200₺   "
+        android:id="@+id/ilanFiyat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

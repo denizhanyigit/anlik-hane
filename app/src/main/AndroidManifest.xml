@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.dyapp.anindaev"
+    android:versionCode="12"
+    android:versionName="12.1">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logom"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AnindaEv">
+        <activity android:name=".IlanDetayKisiTumIlanlariActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            ></activity>
+        <activity
+            android:name=".KisiTumIlanlariActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MesajlarimActivity"
+            android:label="Mesajlarım"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ChatActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AramaDetayActivity"
+            android:label="Arama Sonuçları" />
+        <activity
+            android:name=".IlanResimGuncelleActivity"
+            android:label="İlan Fotoğraflarım"
+            android:parentActivityName=".IlanlarimActivity" />
+        <activity
+            android:name=".SifreDegistirActivity"
+            android:label="Şifre Değiştir"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ProfilimActivity"
+            android:label="Profilim"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".FavoriIlanlarimActivity"
+            android:label="Favori İlanlarım"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".IlanDetayActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".IlanlarimGuncelle"
+            android:label="İlan Güncelle"
+            android:parentActivityName=".IlanlarimActivity" />
+        <activity
+            android:name=".IlanlarimActivity"
+            android:label="İlanlarım"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".GirisActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".IlanEkleActivity4"
+            android:label="İlan Resim Ekle" />
+        <activity
+            android:name=".IlanEkleActivity3"
+            android:label="İlan Detayları"
+            android:parentActivityName=".IlanEkleActivity2" />
+        <activity
+            android:name=".IlanEkleActivity2"
+            android:label="İlan Detayları"
+            android:parentActivityName=".IlanEkleActivity1" />
+        <activity
+            android:name=".IlanEkleActivity1"
+            android:label="İlan Detayları"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".SifremiUnuttumActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DogrulamaActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".KayitOlActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="Anlık Hane"/>
+        <activity
+            android:name=".AcilisActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service
+            android:name=".Bildirim.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-6261653662849942~5050468043" />
+    </application>
+
+</manifest>

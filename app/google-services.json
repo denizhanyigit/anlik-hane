@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "310592734710",
+    "firebase_url": "https://anlik-hane.firebaseio.com",
+    "project_id": "anlik-hane",
+    "storage_bucket": "anlik-hane.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:310592734710:android:9bd47a29bf4230753673d7",
+        "android_client_info": {
+          "package_name": "com.dyapp.anindaev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "310592734710-ouccoura5c32qk543sjl7cfehhsruto0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAaVVETahp8SltF9PF6lw0Cvwlg9qhi2qE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "310592734710-ouccoura5c32qk543sjl7cfehhsruto0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

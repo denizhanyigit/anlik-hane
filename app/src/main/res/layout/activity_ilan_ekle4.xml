@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    android:background="@drawable/layoutdesign"
+    android:backgroundTint="#FAFAFA"
+    android:orientation="vertical"
+    tools:context=".IlanEkleActivity4">
+
+    <LinearLayout
+        android:layout_margin="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:textColor="#000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:text="İlanına fotoğraf ekle"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:backgroundTint="@color/teal200"
+        android:background="@drawable/butndesign"
+        android:visibility="visible"
+        android:id="@+id/resimSec"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:text="FOTOĞRAF SEÇ" />
+        <TextView
+            android:background="@drawable/butndesign"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:backgroundTint="@color/teal200"
+            android:visibility="gone"
+            android:id="@+id/resimYukle"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="FOTOĞRAFI YÜKLE" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:id="@+id/secimiKaldir"
+            android:layout_margin="10dp"
+            android:textSize="15sp"
+            android:textColor="#000"
+            android:text="Seçimi kaldır"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_margin="20dp"
+            android:visibility="gone"
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:id="@+id/bilgilendirme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:background="@drawable/noimage"
+            android:id="@+id/secilenIlanImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+             />
+        <TextView
+            android:textSize="17sp"
+            android:textColor="#000"
+            android:id="@+id/anasayfaDon"
+            android:layout_marginTop="15dp"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="Ana sayfaya dönmek için tıklayın."/>
+    </LinearLayout>
+
+</LinearLayout>

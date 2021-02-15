@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/ilanlarim_layout_design"
+    android:backgroundTint="#f5f5f5">
+
+    <ImageView
+        android:id="@+id/ilanResim"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_margin="10dp" />
+
+    <TextView
+        android:id="@+id/ilanBaslik"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_toRightOf="@+id/ilanResim"
+        android:text="deneme baslik"
+        android:textColor="#000" />
+
+    <ImageView
+        android:id="@+id/ilanKonumIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ilanBaslik"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/ilanResim"
+        android:src="@drawable/location" />
+
+    <TextView
+        android:id="@+id/ilanIl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ilanBaslik"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/ilanKonumIcon"
+        android:text="İstanbul, "
+        android:textColor="#000"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/ilanIlce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ilanBaslik"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/ilanIl"
+        android:text="Ataşehir"
+        android:textColor="#000"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/ilanFiyat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ilanBaslik"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_toRightOf="@id/ilanIlce"
+        android:text="200₺   "
+        android:textAlignment="textEnd"
+        android:textColor="#2196F3"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

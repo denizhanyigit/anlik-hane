@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item android:title="MENÜ">
+        <menu>
+            <item
+                android:icon="@drawable/home_48x48"
+                android:id="@+id/anasayfa"
+                android:title="Anasayfa"/>
+            <item
+                android:icon="@drawable/plus_48x48"
+                android:id="@+id/ilanekle"
+                android:title="İlan ver"/>
+            <item
+                android:icon="@drawable/list_48x48"
+                android:id="@+id/ilanlarim"
+                android:title="İlanlarım"/>
+            <item
+                android:icon="@drawable/star_48x48"
+                android:id="@+id/favoriIlanlarim"
+                android:title="Favori İlanlarim"/>
+            <item
+                android:icon="@drawable/letter_48x48"
+                android:id="@+id/mesajlarim"
+                android:title="Mesajlarım"/>
+        </menu>
+    </item>
+
+    <item android:title="PROFİL">
+        <menu>
+            <item
+                android:icon="@drawable/person_48x48"
+                android:id="@+id/hesabim"
+                android:title="Hesabım"/>
+            <item
+                android:icon="@drawable/key_48x48"
+                android:id="@+id/sifredegistir"
+                android:title="Şifre Değiştir"/>
+            <item
+                android:icon="@drawable/exit_48x48"
+                android:id="@+id/cikis"
+                android:title="Çıkış Yap"/>
+        </menu>
+    </item>
+
+</menu>

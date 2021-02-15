@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/anaRelativeLayout"
+    android:layout_margin="10dp"
+    tools:context=".IlanResimGuncelleActivity">
+
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="#dcdcdc"
+        android:id="@+id/ilanDetaySliderLayout"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:orientation="vertical">
+
+        <androidx.viewpager.widget.ViewPager
+            android:background="#fff"
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            ></androidx.viewpager.widget.ViewPager>
+
+        <me.relex.circleindicator.CircleIndicator
+            app:ci_drawable="@color/teal200"
+            app:ci_drawable_unselected="@color/black"
+            android:id="@+id/sliderNokta"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+    </RelativeLayout>
+<LinearLayout
+    android:id="@+id/secenekler"
+    android:layout_marginTop="15dp"
+    android:layout_below="@+id/ilanDetaySliderLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal">
+    <TextView
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:backgroundTint="@color/teal200"
+        android:background="@drawable/butndesign"
+        android:text="FOTOĞRAFLARI SİL"
+        android:id="@+id/resimSil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:backgroundTint="@color/teal200"
+        android:background="@drawable/butndesign"
+        android:text="FOTOĞRAF EKLE"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/resimSec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:backgroundTint="@color/teal200"
+        android:background="@drawable/butndesign"
+        android:text="FOTOĞRAFI YÜKLE"
+        android:layout_marginLeft="20dp"
+        android:visibility="gone"
+        android:id="@+id/resimYukle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/secimiKaldir"
+        android:layout_margin="10dp"
+        android:textSize="15sp"
+        android:textColor="#000"
+        android:text="Seçimi kaldır"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/secenekler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linear">
+        <TextView
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:id="@+id/bilgilendirme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    <ImageView
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        android:scaleType="fitEnd"
+        android:id="@+id/secilenIlanImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    </LinearLayout>
+</RelativeLayout>
+</ScrollView>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Günlük Ev Kirala Anlık Hane</string>
+    <string name="open" />
+    <string name="close" />
+    <string name="bilgi">Şifre sıfırlama maili gönderdikten sonra e-postalarınız arasında bu maili göremiyorsanız
+    gereksiz e-posta(spam) kısmını kontrol etmeyi unutmayınız.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
